@@ -1,0 +1,294 @@
+/*import fonts from fonts.css file*/
+@import url(./fonts.css);
+@import url(./partial/variable.css);
+
+/* globle styling*/
+@import url(./partial/_globle.css);
+
+/* start navigation */
+
+.header_area .main-menu .navbar .navbar-brand{
+    padding: 0.2rem 0.5rem;
+}
+.header_area .main-menu .navbar{
+    padding: 1rem 5rem;
+}
+.header_area .main-menu .nav-item .nav-link{
+    font: normal 500 20px/2px var(--roboto);
+    text-transform: uppercase;
+    padding: 1.7rem;
+    color: var(--tittle-color);
+}
+
+.header_area .main-menu .navbar-nav .active a{
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.header_area .main-menu .navbar-nav a:hover{
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+/* end navigation */
+
+/* Banner area */
+.site-main .site-banner{
+    background: url(../img/banner/home-banner.png) no-repeat;
+    /* background-position: 0% 50%; */
+}
+.site-main .site-banner .site-title h3{
+    padding-top: 35%;
+    font-weight: 500;
+}
+.site-main .site-banner .site-title h3::after{
+    content: "";
+    height: 2px;
+    width: 18vw;
+    background: black;
+    display: inline-block;
+    margin-left: 5%;
+    transform: translateY(-10px);
+}
+.site-main .site-banner .site-title h1{
+    font-size: 3rem;
+}
+.site-main .site-banner .site-title h4{
+    font-size: 1.5rem;
+}
+.site-main .site-banner .banner-image > img{
+    padding: 7rem 0;
+    width: 35rem;
+    padding-left: 200px;
+    padding-top: 100px;
+    border-radius: 79% 50% 53% 52%;
+}
+
+/* End Banner area */
+
+/* Start About area */
+.site-main .about-area{
+    padding: 15rem 5rem;
+}
+.site-main .about-area .pic >img {
+    width: 70%;
+    /* border: 1px solid black; */
+    padding-top: 120px;
+}
+.site-main .about-area .about-title h2 > span{
+   display: block;
+   font: normal bold 49px/60px var(--roboto); 
+   letter-spacing: 15px;
+}
+.site-main .about-area .about-title .paragraph > p{
+    /* padding: 4rem 0; */
+    font-size: 20px;
+}
+/* End About area */
+
+/* Start Tool area */
+.site-main .tool-area{
+    padding: 1rem 10rem;
+    /* margin-bottom: 4rem; */
+}
+.site-main .tool-area .row .col-lg-4{
+    display: flex;
+    justify-content: center;
+    padding-right: 120px;
+}
+.site-main .tool-area .first-row .col-lg-4 > .single-tool{
+    border: 2px solid var(--border-color);
+    border-radius: 2px;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    margin: 0.9rem 0;
+    width: 180px;
+    /* height: 100px; */
+    transition: transform 0.4s ease;
+}
+.site-main .tool-area .first-row .col-lg-4 .single-tool > img{
+    width: 80px;
+    /* background: transparent; */
+}
+.site-main .tool-area .first-row .col-lg-4 .single-tool:hover{
+    box-shadow: var(--box-shadow);
+    transform: scale(1.1);
+}
+.site-main .tool-area .first-row .col-lg-4 .single-tool > img:hover{
+    /* filter: brightness(0.15); */
+    filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
+}
+.site-main .tool-area .experience-area span{
+    display: block;
+}
+.site-main .tool-area .experience-area .years-area{
+    background: url(../img/client-info-bg.png) no-repeat 45px 20px;
+    padding: 2rem 0;
+    width: 40rem;
+    height: 18rem;
+    padding-left: 8rem;
+    position: relative;
+}
+.site-main .tool-area .experience-area .bg-panel{
+    position: absolute;
+    left: 36%;
+    bottom: -208%;
+    background: #8f05050a;
+    width: 400px;
+    height: 400px;
+    margin-left: 340px;
+    z-index: -1;
+}
+.site-main .tool-area .experience-area .years-area .years{
+    font: normal bold 84px/40px var(--roboto);
+    color: var(--primary-color);
+    z-index: 2;
+}
+.site-main .tool-area .experience-area .years-area h2 > span{
+    font: normal600 22px/30px var(--roboto);
+}
+.site-main .tool-area .experience-area .call-area{
+    padding-left: 10rem;
+    /* padding-top: 9rem; */
+    
+}
+.site-main .tool-area .experience-area .call-area .call-now > a{
+    color: rgb(32, 138, 181);
+    /* text-transform: var(--primary-color); */
+}
+/* End Tool area */
+
+/* Start Services area */
+.site-main .services-area{
+    padding: 7rem 2rem;
+}
+.site-main .services-area .services-title{
+    padding: 0.14rem;
+}
+.site-main .services-area .services-title h1{
+    font-size: 35px;
+}
+.site-main .services-area .services-title p{
+    font-size: 20px;
+}
+.site-main > .services-area .services{
+    background: rgba(245, 249, 251, 0.973);
+    padding: 2rem 0.7rem;
+    width: 16rem;
+    height: 20rem;
+    margin: 5rem .5rem;
+    transition: box-shadow 0.7s ease;
+}
+.site-main > .services-area .services:hover{
+    box-shadow: var(--box-shadow);
+}
+
+/* End Services area */
+
+/* Start Project area */
+.site-main .project-area{
+    padding: 4rem 0;
+}
+.site-main .project-area .button-group button{
+    background: transparent;
+    border: none;
+    font: normal 500 20px/130px var(--roboto);
+    /* margin-right: 15px; */
+    text-transform: uppercase;
+}
+.site-main .project-area .button-group button + button {
+    padding-left: 3rem;
+}
+.site-main .project-area .grid .our-project > title h4{
+    font: normal 700 25px/12px var(--roboto);
+}
+.site-main .project-area .grid .our-project .img a:hover img{
+    filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
+}
+
+/* End Project area */
+
+/* Start About me area */
+.site-main .about-area .about-title p {
+    /* padding: 1rem 7rem 3rem 7rem; */
+}
+.site-main .about-area .client{
+    background: #ffffff10;
+    box-shadow: var(--box-shadow);
+    margin: 3rem 0rem;
+}
+.site-main .about-area .client .client-img{
+    padding: 2rem;
+}
+.site-main .about-area .client .about-client{
+    padding-top: 2rem;
+}
+.site-main .about-area .client .about-client h4{
+    font: normal500 21px/20px var(--roboto);
+}
+.site-main .about-area .client .about-client p{
+    font-size: 14px;
+}
+.site-main .about-area .owl-carousel .owl-item{
+    display: flex;
+    justify-content: center;
+    padding: 0 1.5rem;
+}
+.site-main .about-area .owl-carousel .owl-dots .owl-dot.active span{
+    background: var(--primary-color);
+    width: 12px;
+    height: 12px;
+}
+/* End About me area */
+
+/* subscribe area */
+.site-main .subscribe-area .subscribe{
+    background: url(../img/subscribe-bg.png) no-repeat;
+    padding: 10rem 0;
+    margin: 3rem auto;
+}
+.site-main .subscribe-area .subscribe .subscribe-title h4{
+    font: normal 700 35px/30px var(--roboto);
+    color: whitesmoke;
+}
+.site-main .subscribe-area .subscribe .subscribe-title p{
+    color: whitesmoke;
+    padding: 1rem 4rem;
+}
+.site-main .subscribe-area .subscribe form .input-textbox input{
+    width: 400px;
+    padding: 1rem 1rem;
+    border: 1px solid whitesmoke;
+    background: transparent;
+    color: whitesmoke;
+    font: normal 500 17px/20px var(--roboto);
+}
+.site-main .subscribe-area .subscribe form .input-textbox input::placeholder{
+    color: whitesmoke;
+}
+.site-main .subscribe-area .subscribe form .btn-submit button{
+    background: whitesmoke;
+    color: black;
+    padding: 1rem 2rem;
+}
+/* End subscribe area */
+
+/* Footer area */
+footer.footer-area{
+    padding: 5rem 0;
+    background: url(../img/footer-bg.png) no-repeat;
+}
+footer.footer-area .social h5{
+    font: normal 500 23px/30px var(--roboto);
+}
+footer.footer-area .social a > i{
+    font-size: 22px;
+    padding: 2rem;
+    color: var(--border-color);
+}
+footer.footer-area .social a:hover > i{
+    color: var(--primary-color);
+}
+/* END Footer area */
