@@ -54,11 +54,11 @@
 
 p.para{
     color: var(--text-color);
-    font: normal 500 16px/30px ;
+    font: normal 500 16px/30px var(--roboto);
 }
 
 .font-roboto{
-    /* font-family: var(--roboto); */
+    font-family: var(--roboto);
 }
 button:focus,
 button:active
@@ -69,7 +69,7 @@ button:hover
     box-shadow: none !important;
 }
 .title-h1{
-    font: normal bold 39px/40px ;
+    font: normal bold 39px/40px var(--roboto);
 }
 
 .navbar_fixed{

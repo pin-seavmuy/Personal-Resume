@@ -2,7 +2,7 @@
 /* Globle classes*/
 
 .title-text{
-    font: normal bold 50px/72px ;
+    font: normal bold 50px/72px var(--roboto);
 }
 .text-uppercase{
     text-transform: uppercase;
@@ -11,7 +11,7 @@
 /* Button */
 .button{
     padding: 0.8rem 2.2rem;
-    font: normal500 16px/20px ;
+    font: normal500 16px/20px var(--roboto-);
     position: relative;
     border: 3px solid transparent;
     border-radius: 4px;
@@ -54,11 +54,11 @@
 
 p.para{
     color: var(--text-color);
-    font: normal 500 16px/30px ;
+    font: normal 500 16px/30px var(--roboto);
 }
 
 .font-roboto{
-    /* font-family: var(--roboto); */
+    font-family: var(--roboto);
 }
 button:focus,
 button:active
@@ -69,7 +69,7 @@ button:hover
     box-shadow: none !important;
 }
 .title-h1{
-    font: normal bold 39px/40px ;
+    font: normal bold 39px/40px var(--roboto);
 }
 
 .navbar_fixed{
