@@ -258,10 +258,11 @@
         <div class="button-group text-center mb-4">
           <button type="button" class="active" data-filter="*">All</button>
           <button type="button" data-filter=".latest">Latest</button>
+          <button type="button" data-filter=".previous">Previous</button>
           <button type="button" data-filter=".upcoming">Upcoming</button>
         </div>
 
-        <div class="row grid">
+        <div class="row grid gx-4 gy-5">
 
           <div class="col-lg-4 col-md-6 col-sm-12 element-item latest">
             <div class="our-project">
@@ -283,7 +284,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-sm-12 element-item latest">
+          <div class="col-lg-4 col-md-6 col-sm-12 element-item previous">
             <div class="our-project">
               <div class="img">
                 <a href="#" class="project-link" data-bs-toggle="modal" data-bs-target="#projectModal"
@@ -298,7 +299,7 @@
               </div>
               <div class="title py-4">
                 <h4 class="text-uppercase">Rental House System</h4>
-                <span class="text-secondary">Latest</span>
+                <span class="text-secondary">Previous</span>
               </div>
             </div>
           </div>
@@ -323,7 +324,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-sm-12 element-item upcoming">
+          <div class="col-lg-4 col-md-6 col-sm-12 element-item latest">
             <div class="our-project">
               <div class="img">
                 <a href="#" class="project-link" data-bs-toggle="modal" data-bs-target="#projectModal"
@@ -338,7 +339,7 @@
               </div>
               <div class="title py-4">
                 <h4 class="text-uppercase">UI Playgrouund</h4>
-                <span class="text-secondary">Upcoming</span>
+                <span class="text-secondary">Latest</span>
               </div>
             </div>
           </div>
@@ -403,7 +404,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-sm-12 element-item latest">
+          <div class="col-lg-4 col-md-6 col-sm-12 element-item previous">
             <div class="our-project">
               <div class="img">
                 <a href="#" class="project-link" data-bs-toggle="modal" data-bs-target="#projectModal"
@@ -418,12 +419,12 @@
               </div>
               <div class="title py-4">
                 <h4 class="text-uppercase">Weather Forecast</h4>
-                <span class="text-secondary">Latest</span>
+                <span class="text-secondary">Previous</span>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-sm-12 element-item latest">
+          <div class="col-lg-4 col-md-6 col-sm-12 element-item previous">
             <div class="our-project">
               <div class="img">
                 <a href="#" class="project-link" data-bs-toggle="modal" data-bs-target="#projectModal"
@@ -438,7 +439,7 @@
               </div>
               <div class="title py-4">
                 <h4 class="text-uppercase">Food Ordering</h4>
-                <span class="text-secondary">Latest</span>
+                <span class="text-secondary">Previous</span>
               </div>
             </div>
           </div>
@@ -447,229 +448,292 @@
       </div>
     </section>
 
-   <!-- ============================ Project Modal ================================================= -->
-<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-xl">
-    <div class="modal-content">
+    <!-- ============================ Project Modal ================================================= -->
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content project-modal-content">
 
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h5 class="modal-title" id="projectModalLabel">Project Title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
+          <!-- Modal Header with Glassmorphism -->
+          <div class="modal-header border-0 pb-0">
+            <h5 class="modal-title fw-bold text-uppercase" id="projectModalLabel" style="letter-spacing: 2px;">Project Title</h5>
+            <button type="button" class="btn-close glass-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
 
-      <!-- Modal Body -->
-      <div class="modal-body">
-        <div class="row">
+          <!-- Modal Body -->
+          <div class="modal-body pt-4">
+            <div class="row g-4">
 
-          <!-- Left: Image Gallery -->
-          <div class="col-lg-6 mb-3">
-            <div id="projectImages" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner" id="carouselInner" style="height: 420px;">
-                <!-- Images will be injected dynamically -->
+              <!-- Left: Image Gallery with rounded corners -->
+              <div class="col-lg-7 d-flex flex-column">
+                <div id="projectImages" class="carousel slide shadow-sm flex-grow-1" data-bs-ride="carousel" style="border-radius: 12px; overflow: hidden; height: 100%;">
+                  <div class="carousel-inner" id="carouselInner" style="height: 100%; min-height: 450px; background: #fdfdfd;">
+                    <!-- Images will be injected dynamically -->
+                  </div>
+                  <button class="carousel-control-prev custom-carousel-cntrl" type="button" data-bs-target="#projectImages" data-bs-slide="prev">
+                    <i class="bi bi-chevron-left h3 mb-0"></i>
+                  </button>
+                  <button class="carousel-control-next custom-carousel-cntrl" type="button" data-bs-target="#projectImages" data-bs-slide="next">
+                    <i class="bi bi-chevron-right h3 mb-0"></i>
+                  </button>
+                </div>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#projectImages" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#projectImages" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+
+              <!-- Right: Structured Project Info -->
+              <div class="col-lg-5 project-info-pane">
+                <div class="info-section mb-4">
+                  <h6 class="section-label mb-2"><i class="bi bi-info-circle me-2"></i>DESCRIPTION</h6>
+                  <p id="projectDescription" class="text-muted small-line-height">Project description goes here.</p>
+                </div>
+
+                <div class="info-section mb-4">
+                  <h6 class="section-label mb-2"><i class="bi bi-code-square me-2"></i>TECHNOLOGIES</h6>
+                  <div id="projectTechnology" class="d-flex flex-wrap gap-2">
+                    <!-- Tech badges injected here -->
+                  </div>
+                </div>
+
+                <div class="info-section mb-4">
+                  <h6 class="section-label mb-2"><i class="bi bi-list-check me-2"></i>KEY FEATURES</h6>
+                  <div id="projectFeatures" class="features-list">
+                    <!-- Features as sleek items -->
+                  </div>
+                </div>
+
+                <div class="info-section">
+                  <h6 class="section-label mb-2"><i class="bi bi-link-45deg me-2"></i>LINKS</h6>
+                  <div id="projectLinks" class="d-flex flex-column gap-2 mt-3">
+                    <!-- Links with icons -->
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
 
-          <!-- Right: Project Info -->
-          <div class="col-lg-6">
-            <!-- Description -->
-            <h6 class="text-uppercase">Description</h6>
-            <p id="projectDescription">Project description goes here.</p>
-
-            <!-- Technology -->
-            <h6 class="text-uppercase mt-3">Technology Used</h6>
-            <p id="projectTechnology" class="mb-3">
-              <!-- Technologies will be injected as comma-separated line -->
-            </p>
-
-            <!-- Features -->
-            <h6 class="text-uppercase mt-3">Features</h6>
-            <ul id="projectFeatures" class="list-group list-group-flush">
-              <!-- Features injected dynamically with "-" -->
-            </ul>
-
-            <!-- Project Links -->
-            <h6 class="text-uppercase mt-3">Project Links</h6>
-            <ul id="projectLinks" class="list-group list-group-flush">
-              <!-- Links injected dynamically with icons -->
-            </ul>
+          <!-- Modal Footer -->
+          <div class="modal-footer border-0">
+            <button type="button" class="btn px-4 py-2 text-uppercase fw-bold modal-close-btn" data-bs-dismiss="modal">Close</button>
           </div>
 
         </div>
       </div>
-
-      <!-- Modal Footer -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-
     </div>
-  </div>
-</div>
-<!-- ============================ End Modal ================================================= -->
+    <!-- ============================ End Modal ================================================= -->
 
-<!-- ============================ Project Modal JS ================================================= -->
-<script defer>
-document.addEventListener('DOMContentLoaded', function() {
-  const projectLinks = document.querySelectorAll('.project-link');
-  const modalTitle = document.getElementById('projectModalLabel');
-  const modalDescription = document.getElementById('projectDescription');
-  const projectTechnology = document.getElementById('projectTechnology');
-  const projectFeatures = document.getElementById('projectFeatures');
-  const carouselInner = document.getElementById('carouselInner');
-  const projectLinksBlock = document.getElementById('projectLinks');
+    <!-- ============================ Project Modal JS ================================================= -->
+    <script defer>
+      document.addEventListener('DOMContentLoaded', function () {
+        const projectLinks = document.querySelectorAll('.project-link');
+        const modalTitle = document.getElementById('projectModalLabel');
+        const modalDescription = document.getElementById('projectDescription');
+        const projectTechnology = document.getElementById('projectTechnology');
+        const projectFeatures = document.getElementById('projectFeatures');
+        const carouselInner = document.getElementById('carouselInner');
+        const projectLinksBlock = document.getElementById('projectLinks');
 
-  projectLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      // --- Title & Description ---
-      modalTitle.textContent = link.getAttribute('data-title');
-      modalDescription.textContent = link.getAttribute('data-description');
+        projectLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            // Reset animations for fresh look
+            const elementsToAnimate = [modalTitle, modalDescription, projectTechnology, projectFeatures, projectLinksBlock];
+            elementsToAnimate.forEach(el => {
+              el.style.opacity = '0';
+              el.style.transform = 'translateY(10px)';
+              setTimeout(() => {
+                el.style.transition = 'all 0.5s ease';
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+              }, 100);
+            });
 
-      // --- Technologies (comma-separated) ---
-      const techList = link.getAttribute('data-tech')?.split(',') || [];
-      projectTechnology.textContent = techList.map(t => t.trim()).join(', ');
+            // --- Title & Description ---
+            modalTitle.textContent = link.getAttribute('data-title');
+            modalDescription.textContent = link.getAttribute('data-description');
 
-      // --- Features with "-" ---
-      const featureList = link.getAttribute('data-features')?.split(',') || [];
-      projectFeatures.innerHTML = '';
-      featureList.forEach(feature => {
-        const li = document.createElement('li');
-        li.className = 'list-group-item';
-        li.textContent = `- ${feature.trim()}`;
-        projectFeatures.appendChild(li);
+            // --- Technologies (Chips/Badges) ---
+            const techList = link.getAttribute('data-tech')?.split(',') || [];
+            projectTechnology.innerHTML = '';
+            techList.forEach(tech => {
+              const span = document.createElement('span');
+              span.className = 'tech-badge';
+              span.textContent = tech.trim();
+              projectTechnology.appendChild(span);
+            });
+
+            // --- Features with custom style ---
+            const featureList = link.getAttribute('data-features')?.split(',') || [];
+            projectFeatures.innerHTML = '';
+            featureList.forEach(feature => {
+              const div = document.createElement('div');
+              div.className = 'feature-item d-flex align-items-center mb-1';
+              div.innerHTML = `<i class="bi bi-dot h4 mb-0 me-1"></i><span>${feature.trim()}</span>`;
+              projectFeatures.appendChild(div);
+            });
+
+            // --- Carousel images ---
+            const images = link.getAttribute('data-images')?.split(',') || [];
+            carouselInner.innerHTML = '';
+            images.forEach((imgSrc, index) => {
+              const div = document.createElement('div');
+              div.className = 'carousel-item h-100' + (index === 0 ? ' active' : '');
+              div.innerHTML = `<img src="${imgSrc.trim()}" class="d-block w-100 h-100 p-2" style="object-fit: contain;" alt="Project Image">`;
+              carouselInner.appendChild(div);
+            });
+
+            // --- Project links with modern buttons ---
+            const linksAttr = link.getAttribute('data-links') || '';
+            const linksArray = linksAttr.split(';').map(item => item.trim());
+            projectLinksBlock.innerHTML = '';
+            linksArray.forEach(item => {
+              const colonIndex = item.indexOf(':');
+              if (colonIndex !== -1) {
+                const label = item.slice(0, colonIndex).trim();
+                const url = item.slice(colonIndex + 1).trim();
+                const a = document.createElement('a');
+                a.href = url;
+                a.target = '_blank';
+                a.className = 'project-cta-link d-flex align-items-center p-2 rounded';
+
+                let icon = '';
+                if (label.toLowerCase().includes('github')) {
+                  icon = '<i class="bi bi-github me-3 h5 mb-0"></i>';
+                } else if (label.toLowerCase().includes('demo') || label.toLowerCase().includes('live')) {
+                  icon = '<i class="bi bi-box-arrow-up-right me-3 h5 mb-0"></i>';
+                } else {
+                  icon = '<i class="bi bi-link-45deg me-3 h5 mb-0"></i>';
+                }
+
+                a.innerHTML = `${icon}<span>${label}</span>`;
+                projectLinksBlock.appendChild(a);
+              }
+            });
+          });
+        });
       });
+    </script>
+    <!-- ============================ End Project Modal JS ================================================= -->
 
-      // --- Carousel images ---
-      const images = link.getAttribute('data-images')?.split(',') || [];
-      carouselInner.innerHTML = '';
-      images.forEach((imgSrc, index) => {
-        const div = document.createElement('div');
-        div.className = 'carousel-item' + (index === 0 ? ' active' : '');
-        div.innerHTML = `<img src="${imgSrc.trim()}" class="d-block w-100" style="height: 100%; object-fit: cover;" alt="Project Image">`;
-        carouselInner.appendChild(div);
-      });
+    <!-- ============================ Carousel Image CSS ================================================= -->
+    <style>
+      /* Main Modal Content Glassmorphism */
+      .project-modal-content {
+        border: none;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+      }
 
-      // --- Project links with icons ---
-      const linksAttr = link.getAttribute('data-links') || '';
-      const linksArray = linksAttr.split(';').map(item => item.trim());
-      projectLinksBlock.innerHTML = '';
-      linksArray.forEach(item => {
-        const colonIndex = item.indexOf(':');
-        if (colonIndex !== -1) {
-          const label = item.slice(0, colonIndex).trim();
-          const url = item.slice(colonIndex + 1).trim();
-          const li = document.createElement('li');
-          li.className = 'list-group-item';
+      /* Sections & Typography */
+      .section-label {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        letter-spacing: 1px;
+        opacity: 0.8;
+      }
+      .small-line-height {
+        line-height: 1.6;
+        font-size: 0.95rem;
+      }
 
-          // Choose icon based on label
-          let icon = '';
-          if (label.toLowerCase().includes('github')) {
-            icon = '<i class="bi bi-github me-2"></i>';
-          } else if (label.toLowerCase().includes('demo') || label.toLowerCase().includes('live')) {
-            icon = '<i class="bi bi-box-arrow-up-right me-2"></i>';
-          } else {
-            icon = '<i class="bi bi-link-45deg me-2"></i>';
-          }
+      /* Tech Badges */
+      .tech-badge {
+        background: rgba(68, 88, 220, 0.08);
+        color: var(--primary-color);
+        padding: 5px 15px;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid rgba(68, 88, 220, 0.1);
+      }
+      .tech-badge:hover {
+        background: var(--primary-color);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(68, 88, 220, 0.2);
+      }
 
-          li.innerHTML = `${icon}<a href="${url}" target="_blank">${label}</a>`;
-          projectLinksBlock.appendChild(li);
-        }
-      });
-    });
-  });
-});
-</script>
-<!-- ============================ End Project Modal JS ================================================= -->
+      /* Links & CTAs */
+      .project-cta-link {
+        text-decoration: none;
+        color: #333;
+        font-weight: 600;
+        background: #f8f9fa;
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+      }
+      .project-cta-link:hover {
+        background: white;
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+        transform: translateX(5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      }
 
-<!-- ============================ Carousel Image CSS ================================================= -->
-<style>
-  /* Force all carousel images to same size */
-  #carouselInner {
-    height: 400px; /* adjust height if needed */
-  }
+      /* Feature Items */
+      .feature-item {
+        font-size: 0.9rem;
+        color: #555;
+      }
 
-  #carouselInner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Crop images nicely without distortion */
-  }
+      /* Carousel Controls */
+      .custom-carousel-cntrl {
+        width: 10%;
+        opacity: 0;
+        background: linear-gradient(90deg, rgba(255,255,255,0.2) 0%, transparent 100%);
+        transition: all 0.4s ease;
+      }
+      .carousel-control-next.custom-carousel-cntrl {
+        background: linear-gradient(-90deg, rgba(255,255,255,0.2) 0%, transparent 100%);
+      }
+      #projectImages:hover .custom-carousel-cntrl {
+        opacity: 1;
+      }
+      .custom-carousel-cntrl i {
+        color: #333;
+        text-shadow: 0 2px 4px rgba(255,255,255,0.5);
+      }
 
-  /* Responsive adjustment */
-  @media (max-width: 768px) {
-    #carouselInner {
-      height: 250px;
-    }
-  }
-</style>
+      /* Close Button */
+      .glass-close {
+        padding: 1rem;
+        border-radius: 50%;
+        transition: transform 0.3s rotate 90deg;
+      }
+      .glass-close:hover {
+        background: rgba(0,0,0,0.05);
+      }
+      .modal-close-btn {
+        background: #f8f9fa;
+        color: #666;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+      .modal-close-btn:hover {
+        background: #eee;
+        color: #333;
+      }
 
+      /* Scrollbar Styling for modal info pane */
+      .project-info-pane::-webkit-scrollbar {
+        width: 4px;
+      }
+      .project-info-pane::-webkit-scrollbar-thumb {
+        background: rgba(0,0,0,0.1);
+        border-radius: 10px;
+      }
 
-
-
-
-    <!-- ============================ Start About ME Area ================================================= -->
-        <!-- <section class="about-area">
-          <div class="container">
-            <div class="row text-center">
-              <div class="col-12">
-                <div class="about-title">
-                  <h1 class="text-uppercase title-h1">people say about me</h1>
-                  <p class="para o">
-                    Others may be more self-assured, prioritizing their own beliefs and values over external judgments.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container carouselpy-lg-5">
-            <div class="owl-carousel owl-theme">
-
-              <div class="client row">
-                <div class="col-lg-4 col-md-12 client-img">
-                  <img src="./img/client/sengly.jpg" alt="img1" class="img-fluid">
-                </div>
-                <div class="col-lg-8 col-md-12 about-client">
-                  <h4 class="text-uppercase">Sengly</h4>
-                  <p class="para">
-                    Funny, friendly, nice!!!!
-                  </p>
-                </div>
-              </div>
-              <div class="client row">
-                <div class="col-lg-4 col-md-12 client-img">
-                  <img src="./img/client/deth.jpg" alt="img2" class="img-fluid">
-                </div>
-                <div class="col-lg-8 col-md-12 about-client">
-                  <h4 class="text-uppercase">Chandeth</h4>
-                  <p class="para">
-                    She look scary but don't worry she's a kind person😂
-                  </p>
-                </div>
-              </div>
-              <div class="client row">
-                <div class="col-lg-4 col-md-12 client-img">
-                  <img src="./img/client/smey.jpg" alt="img3" class="img-fluid">
-                </div>
-                <div class="col-lg-8 col-md-12 about-client">
-                  <h4 class="text-uppercase">Reaksmey</h4>
-                  <p class="para">
-                    She's such a naughty kid.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> -->
-        <!-- ============================ End About ME Area ================================================= -->
-         
+      /* Custom animations */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .modal.show .modal-dialog {
+        animation: fadeIn 0.4s ease-out;
+      }
+    </style>
 
   </main>
 
@@ -696,81 +760,8 @@ document.addEventListener('DOMContentLoaded', function() {
   <script src="./vendor/owl-carousel/js/owl.carousel.min.js" defer></script>
   <script src="./js/main.js" defer></script>
 
-  <!-- Project Modal JS -->
-  <!-- Project Modal JS -->
-<script defer>
-document.addEventListener('DOMContentLoaded', function() {
-  const projectLinks = document.querySelectorAll('.project-link');
-  const modalTitle = document.getElementById('projectModalLabel');
-  const modalDescription = document.getElementById('projectDescription');
-  const projectTechnology = document.getElementById('projectTechnology');
-  const projectFeatures = document.getElementById('projectFeatures');
-  const carouselInner = document.getElementById('carouselInner');
-  const projectLinksBlock = document.getElementById('projectLinks');
-
-  projectLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      // --- Title & Description ---
-      modalTitle.textContent = link.getAttribute('data-title');
-      modalDescription.textContent = link.getAttribute('data-description');
-
-      // --- Technologies (comma-separated) ---
-      const techList = link.getAttribute('data-tech')?.split(',') || [];
-      projectTechnology.textContent = techList.map(t => t.trim()).join(', ');
-
-      // --- Features with "-" ---
-      const featureList = link.getAttribute('data-features')?.split(',') || [];
-      projectFeatures.innerHTML = '';
-      featureList.forEach(feature => {
-        const li = document.createElement('li');
-        li.className = 'list-group-item';
-        li.textContent = `- ${feature.trim()}`;
-        projectFeatures.appendChild(li);
-      });
-
-      // --- Carousel images ---
-      const images = link.getAttribute('data-images')?.split(',') || [];
-      carouselInner.innerHTML = '';
-      images.forEach((imgSrc, index) => {
-        const div = document.createElement('div');
-        div.className = 'carousel-item' + (index === 0 ? ' active' : '');
-        div.innerHTML = `<img src="${imgSrc.trim()}" class="d-block w-100" alt="Project Image">`;
-        carouselInner.appendChild(div);
-      });
-
-      // --- Project links with icons ---
-      const linksAttr = link.getAttribute('data-links') || '';
-      const linksArray = linksAttr.split(';').map(item => item.trim());
-      projectLinksBlock.innerHTML = '';
-      linksArray.forEach(item => {
-        const colonIndex = item.indexOf(':');
-        if (colonIndex !== -1) {
-          const label = item.slice(0, colonIndex).trim();
-          const url = item.slice(colonIndex + 1).trim();
-          const li = document.createElement('li');
-          li.className = 'list-group-item';
-
-          // Choose icon based on label
-          let icon = '';
-          if (label.toLowerCase().includes('github')) {
-            icon = '<i class="bi bi-github me-2"></i>';
-          } else if (label.toLowerCase().includes('demo') || label.toLowerCase().includes('live')) {
-            icon = '<i class="bi bi-box-arrow-up-right me-2"></i>';
-          } else {
-            icon = '<i class="bi bi-link-45deg me-2"></i>';
-          }
-
-          li.innerHTML = `${icon}<a href="${url}" target="_blank">${label}</a>`;
-          projectLinksBlock.appendChild(li);
-        }
-      });
-    });
-  });
-});
-</script>
-
-
-
+</body>
+</html>
 
 
 </body>
